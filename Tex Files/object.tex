@@ -1,0 +1,87 @@
+\documentclass{exam}%
+\usepackage{authblk}%
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ }
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage[tmargin=1cm, lmargin=2cm]{geometry}%
+\usepackage{amsmath}%
+\usepackage{tikz}%
+\usepackage{pgfplots}%
+\pgfplotsset{compat=newest}%
+\usepackage{graphicx}%
+\usepackage{pifont}%
+\usepackage{amssymb}%
+\usepackage{fancyhdr}%
+\usepackage{datatool}
+%\DTLsetsoparator{,}
+%import data
+\DTLloaddb[noheader,keys={thekey,thevalue}]{object}{object.dat}
+\newcommand{\missingcommand}[1]{\DTLfetch{object}{thekey}{#1}{thevalue}}
+
+\pagestyle{fancy}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0.0pt}
+\fancyhead[R]{\includegraphics[height=0.40in]{iqra.jpeg}}
+\pagestyle{fancy}
+\begin{document}
+\begin{center}
+
+\Large
+\textbf{Iqra University}\\
+\large
+\Large
+\textbf{Islamabad, Pakistan}\\
+\large
+\Large
+\textbf{\missingcommand{exam type} Examination - \missingcommand{semesteryear} Semester}\\
+\large
+\end{center}
+\begin{table}[h]
+\large
+\begin{center}
+\begin{tabular}{|l|p{3.5in}|}
+\hline
+Course Code: \missingcommand{course code} & Course Title: \missingcommand{course title}\\
+\hline
+Teacher’s Name: \missingcommand{teachername}	& Total Marks: \missingcommand{total marks} \\
+\hline
+Date \& Time: \missingcommand{date} @ \missingcommand{time} & Total Time: \missingcommand{estimated time}\\
+\hline
+Student’s Name:	& Reg. No.:\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-4mm}
+\end{table}
+\underline{\textbf{IMPORTANT NOTE:}} \Large \missingcommand{instruction}\large\\
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+}
+
+\begin{questions}
+\Large
+\question\displaystyle\missingcommand{question1}
+\missingcommand{options1}\\
+
+\question\displaystyle\missingcommand{question2}
+\missingcommand{options2}\\
+
+\question\missingcommand{question3}
+\missingcommand{options3}
+\large
+\end{questions}
+
+
+\end{document}
